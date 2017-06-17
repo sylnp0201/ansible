@@ -1,0 +1,11 @@
+# {{ansible_managed}}
+
+{% for endpoint in endpoints %}
+
+location ^~ {{endpoint}} {
+    proxy_pass          http://localhost:8080;
+    proxy_http_version  1.1;
+    proxy_set_header    Connection "";
+    add_header Cache-Control no-cache;
+}
+{% endfor %}

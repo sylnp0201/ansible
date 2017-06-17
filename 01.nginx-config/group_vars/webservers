@@ -1,0 +1,2 @@
+conf_path: '{{playbook_dir}}/dist/web.config'
+endpoints: ["/", "/users", "/posts"]
